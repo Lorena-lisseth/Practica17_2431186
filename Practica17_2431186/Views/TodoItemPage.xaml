@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica17_2431186.Views.TodoItemPage"
+             Title=""
+             BackgroundImageSource="bolita.jpeg">
+    <VerticalStackLayout Padding="20"
+                         Spacing="10"
+                         VerticalOptions="StartAndExpand">
+        <Label Text="Nombre:" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
+        <Entry Text="{Binding Name}" TextColor="BlueViolet" FontSize="Medium" FontAttributes="Bold"/>
+        <Label Text="Nota:" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
+        <Entry Text="{Binding Notes}" TextColor="BlueViolet" FontSize="Medium" FontAttributes="Bold"/>
+        <Label Text="Listo" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
+        <Switch IsToggled="{Binding Done}" OnColor="PaleVioletRed"/>
+        <HorizontalStackLayout >
+            <Button Text="Guardar"
+                Clicked="OnSaveClicked"
+                HeightRequest="84"
+                WidthRequest="84"
+                CornerRadius="10"
+            Margin="18,0,10,0"/>
+        <Button Text="Borrar"
+                Clicked="OnDeleteClicked"
+                 HeightRequest="84"
+                WidthRequest="84"
+                CornerRadius="10"
+                 Margin="10,0,0,0"/>
+        <Button Text="Cancelar"
+                Clicked="OnCancelClicked"
+                 HeightRequest="84"
+                WidthRequest="85"
+                CornerRadius="10"
+                 Margin="20,0,10,0"/>
+        </HorizontalStackLayout>
+
+
+    </VerticalStackLayout>
+</ContentPage>
